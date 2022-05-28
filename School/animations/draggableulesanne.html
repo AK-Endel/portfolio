@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+    <style>
+        #MoveMe {
+            border: solid;
+            width: 200px;
+            height: 5em;
+            text-align: center;
+            line-height: 5em;
+            background-color: red;
+        }
+        #MoveMe2 {
+            border: solid;
+            width: 200px;
+            height: 5em;
+            text-align: center;
+            line-height: 5em;
+            background-color: green;
+        }
+        #FillMe {
+            border: solid;
+            width: 400px;
+            height: 10em;
+            text-align: center;
+            line-height: 10em;
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+        .Punane {
+            background-color: red;
+        }
+        .Roheline {
+            background-color: green;
+        }
+    </style>
+    <script language="javascript">
+        $(function() {
+            $("#MoveMe").draggable();
+            $("#MoveMe2").draggable();
+            $("#FillMe").droppable({
+               drop: function(event, ui) {
+                var xy=(ui.draggable[0].innerText);
+            console.log(xy);
+                   $(this)
+                        .addClass(xy)
+                        .html("Filled with " + ui.draggable[0].innerText);
+                        
+               }
+            });
+        });
+    </script>
+    <title>Droppable Container Fill</title>
+</head>
+
+<body>
+    <h1>Creating a draggable element</h1>
+    <p id="MoveMe">
+        Punane
+    </p>
+    <p id="MoveMe2">
+        Roheline
+    </p>
+    <p id="FillMe">
+        Container
+    </p>
+</body>
+</html>

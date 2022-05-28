@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <title>Filters</title>
+ </head>
+	<body>
+        <p><li>number</li>
+            <li>kuupaev</li>
+            <li>miskit</li>
+            <li>4</li>
+            <li>5</li>
+            <li>numbe23r</li>
+            <li>numbe5252r</li>
+            <li>numb1212424er</li>
+            <li>numb242412124124er</li>
+
+        </p>
+		<div ng-app="myApp" ng-controller="personCtrl">
+			
+            <p>The Name is {{ lastName | uppercase }}</p>
+            <p>The name is {{ firstName | lowercase }}</p>
+		</div>
+		
+		<script>
+            var app=angular.module('myApp', []).controller("personCtrl", function($scope){
+				$scope.firstName = "John",
+				$scope.lastName = "Doe"
+			});
+		</script>
+</body>
+</html>

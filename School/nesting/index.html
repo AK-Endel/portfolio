@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+	<link rel="stylesheet/less" type="text/css" href="styles.less">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="fixed-top navbar navbar-expand navbar-dark bg-info " aria-label="Second navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="#landing">Käsna-Kalle Kantpüks</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#aboutme">Käsna-Kallest</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#movies">Filmid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#others">Teised osalised</a>
+          </li>
+			<li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#fanmail">Fan Mail</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid mt-5 p-5 bg-image banner font-italic d-flex justify-content-center align-items-center text-center" id="landing">
+	<h2>"I have a square head and a real ghost has a round one. All we have to do is make my head round and boo, I’m scary!" -SpongeBob.</h2>
+	</div>
+	<div class="container-fluid p-5 bg-image" id="aboutme">
+	<h2>"Käsna-Kalle Kantpüks" on Ameerika Ühendriikide Emmy auhinna võitnud joonissari, mille autor on merebioloog Stephen Hillenburg. Seriaali hakkas 1999. aastal tootma Nickelodeon Animation Studios. Eestis näitab sarja TV3, Kanal 2 ja Nickelodeon.</h2>
+	</div>
+	
+	<div class="container-fluid p-5 bg-image" id="movies">
+	<div class="list-group" id="movieslist">
+  <a href="#" class="firstmovie list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="movie.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">Käsna-Kalle Kantpüks: Käsn jooksus</h6>
+        <p class="mb-0 opacity-75">Kõige  uuem film, saadaval Netflixis</p>
+      </div>
+      <small class="opacity-50 text-nowrap">2021</small>
+    </div>
+  </a>
+  <a href="#" class="secondmovie list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="movie.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">Käsna-Kalle Kantpüksi film (2)</h6>
+        <p class="mb-0 opacity-75">Vahepealne film, samuti saadaval Netflixis</p>
+      </div>
+      <small class="opacity-50 text-nowrap">2015</small>
+    </div>
+  </a>
+  <a href="#" class="thirdmovie list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="movie.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">Käsna-Kalle Kantpüksi film</h6>
+        <p class="mb-0 opacity-75">Kõige esimene film, saadaval netflixist</p>
+      </div>
+      <small class="opacity-50 text-nowrap">2004</small>
+    </div>
+  </a>
+</div>
+		</div>
+	
+	<div class="container-fluid p-5 bg-image" id="others">
+	<div class="row">
+    <div class="col-sm">
+      <div class="card">
+  <img class="card-img-top" src="pilt2.jfif" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Lemmikloom Gary</h5>
+    <p class="card-text">Gary on Käsna-Kalle lemmikloom.</p>
+    <a href="#" class="btn btn-primary">Loe lähemalt</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+  <img class="card-img-top" src="patrick.jfif" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Parim sõber Patrick</h5>
+    <p class="card-text">Patrick on Käsna-Kalle parim sõber.</p>
+    <a href="#" class="btn btn-primary">Loe lähemalt</a>
+  </div>
+</div>
+    </div>
+    <div class="col-sm">
+		<div class="card">
+  <img class="card-img-top" src="kalmer.jfif" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Naaber Kalmer</h5>
+    <p class="card-text">Kalmaari Kalmer on Käsna-Kalle naaber.</p>
+    <a href="#" class="btn btn-primary">Loe lähemalt</a>
+  </div>
+    </div>
+  </div>
+	</div>
+		</div>
+	<div class="container-fluid p-5 bg-image" id="fanmail">
+	<div class="container contact-form">
+            <form method="post">
+                <h3>Saada meile kiri</h3>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="txtName" class="form-control" placeholder="Sinu nimi" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtEmail" class="form-control" placeholder="Sinu Email" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtPhone" class="form-control" placeholder="Sinu telefoni number" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Saada" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea name="txtMsg" class="form-control txtForm" placeholder="Sõnumi sisu"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+</div>
+	</div>
+	
+	<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="text-muted">&copy; 2021 Spongebob Company, Inc</span>
+    </div>
+  </footer>
+</div>
+
+	
+
+</body>
+</html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

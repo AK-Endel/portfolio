@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Creating Animations Through Class Transitions</title>
+   <style>
+	   .Transition{
+	   }
+      .Normal
+      {
+         font-size: medium;
+		  position: relative;
+		  top: 0;
+  		left: 0;
+         border: none;
+         background-color: white;
+         text-align: left;
+         margin: 0px;
+      }
+      .Effect
+      {
+		  position: relative;
+		    top: 0;
+  left: 0;
+		  height: 500px;
+		  background-image: url('http://24.media.tumblr.com/tumblr_ly7xjxn3QI1r62v9yo1_1280.png');
+      }
+	   .Pic2
+      {
+		  position: relative;
+		    top: 0;
+  left: 0;
+		  height: 500px;
+		  background-image: url('http://fc02.deviantart.net/fs70/f/2011/125/a/4/retold_with_unicorns_by_biotwist-d3fn77s.jpg');
+      }
+	   .emptyelement{
+		   font-size: medium;
+         border: none;
+         background-color: white;
+         text-align: left;
+         margin: 0px;
+	   }
+	   .element1 {
+    display: inline-block;
+position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 1px green solid;    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 3px solid #c99;
+    background-position: center center;
+    background-size: cover;
+	background-image:  url("https://64.media.tumblr.com/b3ea3c082aa71c53409a62c81ffe07d6/1153ccaae15386ec-62/s400x600/ae436c935f56a9a5b579d33170f17779abf6cc40.jpg");
+}
+	   .element2 {
+    display: inline-block;
+position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 1px green solid;    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border: 3px solid #c69;
+    background-position: center center;
+    background-size: cover;
+	background-image: url("https://wallpapercave.com/wp/wp5554081.jpg");
+}
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            
+		   $("#SwitchPic").click(function()
+               {
+                  $(".Normal").switchClass(
+                     "Normal", "Effect", 1, "linear");
+			   $(".Effect").switchClass(
+                     "Effect", "Normal", 1,
+                     "swing");
+                  $(".Pic2").switchClass(
+                     "Pic2", "Effect", 1,
+                     "linear");
+                  return false;
+			   });
+			   $("#SwitchPic2").click(function()
+               {
+                  $(".Normal").switchClass(
+                     "Normal", "Pic2", 1, "linear");
+                  $(".Pic2").switchClass(
+                     "Pic2", "Normal", 1,
+                     "linear");
+			   $(".Effect").switchClass(
+                     "Effect", "Pic2", 1,
+                     "linear");
+                  return false;
+               });
+		  
+		  		$("#SwitchElement").click(function()
+               {
+                  $(".emptyelement").switchClass(
+                     "emptyelement", "element1", 1, "linear");
+                  $(".element2").switchClass(
+                     "element2", "element1", 1,
+                     "linear");
+			   $(".element1").switchClass(
+                     "element1", "emptyelement", 1,
+                     "linear");
+                  return false;
+               });
+		  $("#SwitchElement2").click(function()
+               {
+                  $(".emptyelement").switchClass(
+                     "emptyelement", "element2", 1, "linear");
+                  $(".element1").switchClass(
+                     "element1", "element2", 1,
+                     "linear");
+			   $(".element2").switchClass(
+                     "element2", "emptyelement", 1,
+                     "linear");
+                  return false;
+               });
+        })
+   </script>
+</head>
+
+<body>
+   <h1>Creating Animations Through Class Transitions</h1>
+   <div class="Transition" >
+      <div id="SampleText" class="Normal">
+      </div>
+   </div>
+   <div>
+      <input type="button"
+             id="SwitchPic"
+             value="Pilt 1" />
+	   <input type="button"
+             id="SwitchPic2"
+             value="Pilt 2" />
+
+	   <div id="Samplelem" class="emptyelement">
+      </div>
+   </div>
+   <div>
+	   <input type="button"
+             id="SwitchElement"
+             value="Element 1" />
+	   <input type="button"
+             id="SwitchElement2"
+             value="Element 2" />
+   </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        .div1{
+            transition: all linear 0.5s;
+            background-color: lightblue;
+            height: 300px;
+        }
+        img{height: 200px;}
+
+        .ng-hide{
+            height: 0;
+        }
+    </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+	<body ng-app="myApp">
+        <h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+        <h2>Hide the Image: <input type="checkbox" ng-model="imgCheck"></h2>
+
+        <div class="div1" ng-hide="myCheck">
+            <div ng-hide="imgCheck">
+                <img src="https://64.media.tumblr.com/f93ca402f0ff5de0b03e482cdc50a07b/f61c3a3cc43cf5b4-9f/s1280x1920/a51eece7496dfba20db0e0c6403790888a9c7973.jpg" alt="img">
+            </div>
+        </div>
+
+        <script>
+            var app = angular.module("myApp",["ngAnimate"]);
+        </script>
+			
+</body>
+</html>
