@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<body>
+
+<p id="demo"></p>
+<input type="button" value="Download JSON" onclick="DownloadJSON()" />
+<script type="text/javascript">
+(async () => {
+	let url= "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.5&lon=24.7";
+	let response = await fetch(url)
+	
+	let commits = await response.json();
+	let text = "";
+	
+for (let i = 0; i < 10; i++) {
+  text += (commits.properties.timeseries[i].time) + " " + (commits.properties.timeseries[i].data.instant.details.air_temperature) + "°C <br>";
+}
+	document.getElementById("demo").innerHTML = text;
+})()
+    function DownloadJSON() {
+		
+        //Build a JSON array containing Customer records.
+        var customers = new Array();
+        customers.push(["Customer Id", "Name", "Country"]);
+        customers.push([1, "John Hammond", "United States"]);
+        customers.push([2, "Mudassar Khan", "India"]);
+        customers.push([3, "Suzanne Mathews", "France"]);
+        customers.push([4, "Robert Schidner", "Russia"]);
+ 
+        //Convert JSON Array to string.
+        var json = JSON.stringify(customers);
+ 
+        //Convert JSON string to BLOB.
+        json = [json];
+        var blob1 = new Blob(commits, { type: "text/plain;charset=utf-8" });
+ 
+        //Check the Browser.
+        var isIE = false || !!document.documentMode;
+        if (isIE) {
+            window.navigator.msSaveBlob(blob1, "Customers.txt");
+        } else {
+            var url = window.URL || window.webkitURL;
+            link = url.createObjectURL(blob1);
+            var a = document.createElement("a");
+            a.download = "Customers.txt";
+            a.href = link;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    }
+</script>
+</body>
+</html>

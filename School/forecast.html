@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<body>
+
+<p id="demo"></p>
+<script>
+	
+(async () => {
+	let url= "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.5&lon=24.7";
+	let response = await fetch(url)
+	
+	let commits = await response.json();
+	let text = "";
+	
+for (let i = 0; i < 10; i++) {
+  text += (commits.properties.timeseries[i].time) + " " + (commits.properties.timeseries[i].data.instant.details.air_temperature) + "°C <br>";
+}
+	document.getElementById("demo").innerHTML = text;
+})()
+
+var fs = require('fs');
+
+fs.writeFile ("input.json", JSON.stringify(commits), function(err) {
+    if (err) throw err;
+    console.log('complete');
+    }
+);
+</script>
+</body>
+</html>
